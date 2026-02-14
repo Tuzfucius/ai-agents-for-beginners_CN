@@ -1,60 +1,60 @@
-# AI Agents for Beginners - Study Guide & Course Summary
+# AI Agents for Beginners - 学习指南与课程总结
 
-This guide provides a summary of the "AI Agents for Beginners" course and explains key concepts, frameworks, and design patterns for building AI Agents.
+本指南提供了"AI Agents for Beginners"课程的总结，并解释了构建 AI Agent 的关键概念、框架和设计模式。
 
-## 1. Introduction to AI Agents
+## 1. AI Agent 入门
 
-**What are AI Agents?**
-AI Agents are systems that extend the capabilities of Large Language Models (LLMs) by giving them access to **tools**, **knowledge**, and **memory**. Unlike a standard LLM chatbot that only generates text based on training data, an AI Agent can:
-- **Perceive** its environment (via sensors or inputs).
-- **Reason** about how to solve a problem.
-- **Act** to change the environment (via actuators or tool execution).
+**什么是 AI Agent？**
+AI Agent 是通过赋予大型语言模型 (LLM) 访问**工具**、**知识**和**记忆**的能力来扩展其功能的系统。与仅根据训练数据生成文本的标准 LLM 聊天机器人不同，AI Agent 可以：
+- **感知**其环境（通过传感器或输入）。
+- **推理**如何解决问题。
+- **行动**改变环境（通过执行器或工具执行）。
 
-**Key Components of an Agent:**
-- **Environment**: The space where the agent operates (e.g., a booking system).
-- **Sensors**: Mechanisms to gather information (e.g., reading an API).
-- **Actuators**: Mechanisms to perform actions (e.g., sending an email).
-- **Brain (LLM)**: The reasoning engine that plans and decides which actions to take.
+**Agent 的关键组件：**
+- **环境**：Agent 运行的空间（例如预订系统）。
+- **传感器**：收集信息的机制（例如读取 API）。
+- **执行器**：执行操作的机制（例如发送电子邮件）。
+- **大脑 (LLM)**：计划并决定采取什么行动的推理引擎。
 
-## 2. Agentic Frameworks
+## 2. Agentic 框架
 
-The course covers three primary frameworks for building agents:
+本课程涵盖三个主要的 Agent 构建框架：
 
-| Framework | Focus | Best For |
+| 框架 | 关注点 | 适用于 |
 |-----------|-------|----------|
-| **Semantic Kernel** | Production-ready SDK for .NET/Python | Enterprise applications, integrating AI with existing code. |
-| **AutoGen** | Multi-agent collaboration | Complex scenarios requiring multiple specialized agents talking to each other. |
-| **Azure AI Agent Service** | Managed cloud service | Secure, scalable deployment with built-in state management. |
+| **Semantic Kernel** | 生产级 .NET/Python SDK | 企业应用，将 AI 与现有代码集成。 |
+| **AutoGen** | 多 Agent 协作 | 需要多个专业 Agent 相互对话的复杂场景。 |
+| **Azure AI Agent Service** | 托管云服务 | 具有内置状态管理的安全、可扩展部署。 |
 
-## 3. Agentic Design Patterns
+## 3. Agentic 设计模式
 
-Design patterns help structure how agents operate to solve problems reliably.
+设计模式有助于构建 Agent 的运行方式，以可靠地解决问题。
 
-### **Tool Use Pattern** (Lesson 4)
-This pattern enables agents to interact with the outside world.
-- **Concept**: The agent is provided with a "schema" (a list of available functions and their parameters). The LLM decides *which* tool to call and with *what* arguments based on the user's request.
-- **Flow**: User Request -> LLM -> **Tool Selection** -> **Tool Execution** -> LLM (with tool output) -> Final Response.
-- **Use Cases**: Retrieving real-time data (weather, stock prices), performing calculations, executing code.
+### **工具使用模式**（第 4 课）
+此模式使 Agent 能够与外部世界交互。
+- **概念**：Agent 配备了一个"模式"（可用函数及其参数的列表）。LLM 根据用户请求决定*调用哪个*工具以及*使用什么*参数。
+- **流程**：用户请求 -> LLM -> **工具选择** -> **工具执行** -> LLM（带工具输出）-> 最终响应。
+- **用例**：检索实时数据（天气、股票价格）、执行计算、执行代码。
 
-### **Planning Pattern** (Lesson 7)
-This pattern enables agents to solve complex, multi-step tasks.
-- **Concept**: The agent breaks down a high-level goal into a sequence of smaller subtasks.
-- **Approaches**:
-  - **Task Decomposition**: Splitting "Plan a trip" into "Book flight", "Book hotel", "Rent car".
-  - **Iterative Planning**: Re-evaluating the plan based on the output of previous steps (e.g., if the flight is full, choose a different date).
-- **Implementation**: Often involves a "Planner" agent that generates a structured plan (e.g., JSON) which is then executed by other agents.
+### **规划模式**（第 7 课）
+此模式使 Agent 能够解决复杂的、多步骤的任务。
+- **概念**：Agent 将高级目标分解为一系列较小的子任务。
+- **方法**：
+  - **任务分解**：将"规划旅行"分解为"预订航班"、"预订酒店"、"租车"。
+  - **迭代规划**：根据上一步的输出重新评估计划（例如，如果航班已满，选择不同的日期）。
+- **实现**：通常涉及一个"规划器"Agent 生成结构化计划（例如 JSON），然后由其他 Agent 执行。
 
-## 4. Design Principles
+## 4. 设计原则
 
-When designing agents, consider three dimensions:
-- **Space**: Agents should connect people and knowledge, be accessible but unobtrusive.
-- **Time**: Agents should learn from the *Past*, provide relevant nudges in the *Now*, and adapt for the *Future*.
-- **Core**: Embrace uncertainty but establish trust through transparency and user control.
+设计 Agent 时，请考虑三个维度：
+- **空间**：Agent 应该连接人和知识，易于访问但不突兀。
+- **时间**：Agent 应该从*过去*学习，在*现在*提供相关的提示，并为*未来*进行调整。
+- **核心**：接受不确定性，但通过透明度和用户控制建立信任。
 
-## 5. Summary of Key Lessons
+## 5. 关键课程总结
 
-- **Lesson 1**: Agents are systems, not just models. They perceive, reason, and act.
-- **Lesson 2**: Frameworks like Semantic Kernel and AutoGen abstract the complexity of tool calling and state management.
-- **Lesson 3**: Design with transparency and user control in mind.
-- **Lesson 4**: Tools are the "hands" of the agent. Schema definition is crucial for the LLM to understand how to use them.
-- **Lesson 7**: Planning is the "executive function" of the agent, enabling it to tackle complex workflows.
+- **第 1 课**：Agent 是系统，而不仅仅是模型。它们感知、推理和行动。
+- **第 2 课**：Semantic Kernel 和 AutoGen 等框架抽象了工具调用和状态管理的复杂性。
+- **第 3 课**：设计时考虑透明度和用户控制。
+- **第 4 课**：工具是 Agent 的"手"。模式定义对于 LLM 理解如何使用它们至关重要。
+- **第 7 课**：规划是 Agent 的"执行功能"，使其能够处理复杂的工作流程。

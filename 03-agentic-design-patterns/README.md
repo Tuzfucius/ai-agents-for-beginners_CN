@@ -1,13 +1,13 @@
-[![How to Design Good AI Agents](./images/lesson-3-thumbnail.png)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
+[![How to Design Good AI Agent](./images/lesson-3-thumbnail.png)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
 
 > _(Click the image above to view video of this lesson)_
 # AI Agentic Design Principles
 
-## Introduction
+## 简介
 
-There are many ways to think about building AI Agentic Systems. Given that ambiguity is a feature and not a bug in Generative AI design, it’s sometimes difficult for engineers to figure out where to even start. We have created a set of human-centric UX Design Principles to enable developers to build customer-centric agentic systems to solve their business needs. These design principles are not a prescriptive architecture but rather a starting point for teams who are defining and building out agent experiences.
+There are many ways to think about building AI Agentic Systems. Given that ambiguity is a feature and not a bug in Generative AI design, it’s sometimes difficult for engineers to figure out where to even start. We have created a set of human-centric UX Design Principles to enable developers to build customer-centric Agentic systems to solve their business needs. These design principles are not a prescriptive architecture but rather a starting point for teams who are defining and building out Agent experiences.
 
-In general, agents should:
+In general, Agent should:
 
 - Broaden and scale human capacities (brainstorming, problem-solving, automation, etc.)
 - Fill in knowledge gaps (get me up-to-speed on knowledge domains, translation, etc.)
@@ -20,38 +20,38 @@ In general, agents should:
 - What are some guidelines to follow while implementing these design principles
 - What are some examples of using the design principles
 
-## Learning Goals
+## 学习目标
 
-After completing this lesson, you will be able to:
+完成本节课后, you will be able to:
 
 1. Explain what the Agentic Design Principles are
 2. Explain the guidelines for using the Agentic Design Principles
-3. Understand how to build an agent using the Agentic Design Principles
+3. Understand how to build an Agent using the Agentic Design Principles
 
 ## The Agentic Design Principles
 
-![Agentic Design Principles](./images/agentic-design-principles.png)
+![Agentic Design Principles](./images/Agentic-design-principles.png)
 
 ### Agent (Space)
 
-This is the environment in which the agent operates. These principles inform how we design agents for engaging in physical and digital worlds.
+This is the environment in which the Agent operates. These principles inform how we design Agent for engaging in physical and digital worlds.
 
 - **Connecting, not collapsing** – help connect people to other people, events, and actionable knowledge to enable collaboration and connection.
-- Agents help connect events, knowledge, and people.
-- Agents bring people closer together. They are not designed to replace or belittle people.
-- **Easily accessible yet occasionally invisible** – agent largely operates in the background and only nudges us when it is relevant and appropriate.
+- Agent help connect events, knowledge, and people.
+- Agent bring people closer together. They are not designed to replace or belittle people.
+- **Easily accessible yet occasionally invisible** – Agent largely operates in the background and only nudges us when it is relevant and appropriate.
   - Agent is easily discoverable and accessible for authorized users on any device or platform.
   - Agent supports multimodal inputs and outputs (sound, voice, text, etc.).
   - Agent can seamlessly transition between foreground and background; between proactive and reactive, depending on its sensing of user needs.
-  - Agent may operate in invisible form, yet its background process path and collaboration with other Agents are transparent to and controllable by the user.
+  - Agent may operate in invisible form, yet its background process path and collaboration with other Agent are transparent to and controllable by the user.
 
 ### Agent (Time)
 
-This is how the agent operates over time. These principles inform how we design agents interacting across the past, present, and future.
+This is how the Agent operates over time. These principles inform how we design Agent interacting across the past, present, and future.
 
 - **Past**: Reflecting on history that includes both state and context.
   - Agent provides more relevant results based on analysis of richer historical data beyond only the event, people, or states.
-  - Agent creates connections from past events and actively reflects on memory to engage with current situations.
+  - Agent creates connections from past events and actively reflects on 记忆 to engage with current situations.
 - **Now**: Nudging more than notifying.
   - Agent embodies a comprehensive approach to interacting with people. When an event happens, the Agent goes beyond static notification or other static formality. Agent can simplify flows or dynamically generate cues to direct the user’s attention at the right moment.
   - Agent delivers information based on contextual environment, social and cultural changes and tailored to user intent.
@@ -63,10 +63,10 @@ This is how the agent operates over time. These principles inform how we design 
 
 ### Agent (Core)
 
-These are the key elements in the core of an agent’s design.
+These are the key elements in the core of an Agent’s design.
 
 - **Embrace uncertainty but establish trust**.
-  - A certain level of Agent uncertainty is expected. Uncertainty is a key element of agent design.
+  - A certain level of Agent uncertainty is expected. Uncertainty is a key element of Agent design.
   - Trust and transparency are foundational layers of Agent design.
   - Humans are in control of when the Agent is on/off and Agent status is clearly visible at all times.
 
@@ -86,26 +86,26 @@ Imagine you are designing a Travel Agent, here is how you could think about usin
 2. **Control** – Make sure it’s clear how the user can modify the Agent after it’s been created with things like the System Prompt. Enable the user to choose how verbose the Agent is, its writing style, and any caveats on what the Agent should not talk about. Allow the user to view and delete any associated files or data, prompts, and past conversations.
 3. **Consistency** – Make sure the icons for Share Prompt, add a file or photo and tag someone or something are standard and recognizable. Use the paperclip icon to indicate file upload/sharing with the Agent, and an image icon to indicate graphics upload.
 
-## Sample Codes
+## 示例代码s
 
-- Python: [Agent Framework](./code_samples/03-python-agent-framework.ipynb)
-- .NET: [Agent Framework](./code_samples/03-dotnet-agent-framework.md)
+- Python: [Agent 框架](./code_samples/03-python-Agent-框架.ipynb)
+- .NET: [Agent 框架](./code_samples/03-dotnet-Agent-框架.md)
 
 
-## Got More Questions about AI Agentic Design Patterns?
+## Got More Questions about AI Agentic Design 模式s?
 
-Join the [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
+Join the [Azure AI Foundry Discord](https://aka.ms/ai-Agent/discord) to meet with other learners, attend office hours and get your AI Agent questions answered.
 
 ## Additional Resources
 
 - <a href="https://openai.com" target="_blank">Practices for Governing Agentic AI Systems | OpenAI</a>
-- <a href="https://microsoft.com" target="_blank">The HAX Toolkit Project - Microsoft Research</a>
-- <a href="https://responsibleaitoolbox.ai" target="_blank">Responsible AI Toolbox</a>
+- <a href="https://microsoft.com" target="_blank">The HAX 工具kit Project - Microsoft Research</a>
+- <a href="https://responsibleai工具box.ai" target="_blank">Responsible AI 工具box</a>
 
-## Previous Lesson
+## 上一课
 
-[Exploring Agentic Frameworks](../02-explore-agentic-frameworks/README.md)
+[探索 Agentic 框架](../02-explore-Agentic-框架s/README.md)
 
-## Next Lesson
+## 下一课
 
-[Tool Use Design Pattern](../04-tool-use/README.md)
+[工具使用 Design 模式](../04-工具-use/README.md)

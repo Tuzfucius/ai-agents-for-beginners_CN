@@ -1,4 +1,9 @@
-# AI Agents for Beginners - 中文教程
+#!/usr/bin/env python3
+"""翻译 README.md 文件"""
+
+import os
+
+README_CN = '''# AI Agents for Beginners - 中文教程
 
 ![AI Agents for Beginners](./images/repo-thumbnailv2.png)
 
@@ -174,3 +179,10 @@
 如果您在构建过程中有产品反馈或错误，请访问：
 
 [![Microsoft Foundry 开发者论坛](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+'''
+
+# 保存翻译文件
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(README_CN)
+
+print("✅ 已翻译 README.md")

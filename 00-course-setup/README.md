@@ -1,18 +1,18 @@
-# Course Setup
+# 课程设置
 
-## Introduction
+## 简介
 
 This lesson will cover how to run the code samples of this course.
 
 ## Join Other Learners and Get Help
 
-Before you begin cloning your repo, join the [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) to get any help with setup, any questions about the course, or to connect with other learners.
+Before you begin cloning your repo, join the [AI Agent For Beginners Discord channel](https://aka.ms/ai-Agent/discord) to get any help with setup, any questions about the course, or to connect with other learners.
 
 ## Clone or Fork this Repo
 
 To begin, please clone or fork the GitHub Repository. This will make your own version of the course material so that you can run, test, and tweak the code!
 
-This can be done by clicking the link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">fork the repo</a>
+This can be done by clicking the link to <a href="https://github.com/microsoft/ai-Agent-for-beginners/fork" target="_blank">fork the repo</a>
 
 You should now have your own forked version of this course in the following link:
 
@@ -29,13 +29,13 @@ Replace `<your-username>` in the below commands with your fork URL (or the upstr
 To clone only the latest commit history (small download):
 
 ```bash|powershell
-git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
+git clone --depth 1 https://github.com/<your-username>/ai-Agent-for-beginners.git
 ```
 
 To clone a specific branch:
 
 ```bash|powershell
-git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
+git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-Agent-for-beginners.git
 ```
 
 #### Partial (sparse) clone — minimal blobs + only selected folders
@@ -43,19 +43,19 @@ git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai
 This uses partial clone and sparse-checkout (requires Git 2.25+ and recommended modern Git with partial clone support):
 
 ```bash|powershell
-git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
+git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-Agent-for-beginners.git
 ```
 
 Traverse into the repo folder:
 
 ```bash|powershell
-cd ai-agents-for-beginners
+cd ai-Agent-for-beginners
 ```
 
 Then specify which folders you want (example below shows two folders):
 
 ```bash|powershell
-git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
+git sparse-checkout set 00-course-setup 01-intro-to-ai-Agent
 ```
 
 After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality: no commits, pulls, pushes, or history access).
@@ -85,18 +85,18 @@ Remove-Item -Recurse -Force .git
 
 ## Running the Code
 
-This course offers a series of Jupyter Notebooks that you can run with to get hands-on experience building AI Agents.
+This course offers a series of Jupyter Notebooks that you can run with to get hands-on experience building AI Agent.
 
 The code samples use either:
 
 **Requires GitHub Account - Free**:
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Labelled as (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Labeled as (autogen.ipynb)
+1) Semantic Kernel Agent 框架 + GitHub Models Marketplace. Labelled as (semantic-kernel.ipynb)
+2) AutoGen 框架 + GitHub Models Marketplace. Labeled as (autogen.ipynb)
 
 **Requires Azure Subscription**:
 
-3) Azure AI Foundry + Azure AI Agent Service. Labelled as (azureaiagent.ipynb)
+3) Azure AI Foundry + Azure AI Agent Service. Labelled as (azureaiAgent.ipynb)
 
 We encourage you to try out all three types of examples to see which one works best for you.
 
@@ -157,7 +157,7 @@ Make sure that you are using the right version of Python in VSCode.
 
 ### Step 1: Retrieve Your GitHub Personal Access Token (PAT)
 
-This course leverages the GitHub Models Marketplace, providing free access to Large Language Models (LLMs) that you will use to build AI Agents.
+This course leverages the GitHub Models Marketplace, providing free access to Large Language Models (大型语言模型s) that you will use to build AI Agent.
 
 To use the GitHub Models, you will need to create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
@@ -275,7 +275,7 @@ If you want to run these samples, you will need to add the following environment
 
 - `AZURE_OPENAI_RESOURCE_GROUP` - Go to **Project properties** on the **Overview** page of the **Management Center**.
 
-- `GLOBAL_LLM_SERVICE` - Under **Connected resources**, find the **Azure AI Services** connection name. If not listed, check the **Azure portal** under your resource group for the AI Services resource name.
+- `GLOBAL_大型语言模型_SERVICE` - Under **Connected resources**, find the **Azure AI Services** connection name. If not listed, check the **Azure portal** under your resource group for the AI Services resource name.
 
 ### Models + Endpoints Page
 
@@ -308,10 +308,10 @@ from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 ## Stuck Somewhere?
 
-If you have any issues running this setup, hop into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create an issue</a>.
+If you have any issues running this setup, hop into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-Agent-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create an issue</a>.
 
-## Next Lesson
+## 下一课
 
-You are now ready to run the code for this course. Happy learning more about the world of AI Agents! 
+You are now ready to run the code for this course. Happy learning more about the world of AI Agent! 
 
-[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
+[AI Agent 入门 and Agent Use Cases](../01-intro-to-ai-Agent/README.md)
