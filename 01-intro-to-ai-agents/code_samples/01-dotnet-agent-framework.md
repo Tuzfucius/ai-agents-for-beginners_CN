@@ -1,51 +1,51 @@
-# 🌍 AI Travel Agent with Microsoft Agent Framework (.NET)
+# 🌍 使用 Microsoft Agent Framework (.NET) 构建 AI 旅行代理
 
-## 📋 Scenario Overview
+## 📋 场景概述
 
-This example demonstrates how to build an intelligent travel planning agent using the Microsoft Agent Framework for .NET. The agent can automatically generate personalized day-trip itineraries for random destinations around the world.
+本示例演示了如何使用 Microsoft Agent Framework for .NET 构建智能旅行规划代理。该代理可以自动为全球随机目的地生成个性化的一日游行程。
 
-### Key Capabilities:
+### 核心能力：
 
-- 🎲 **Random Destination Selection**: Uses a custom tool to pick vacation spots
-- 🗺️ **Intelligent Trip Planning**: Creates detailed day-by-day itineraries
-- 🔄 **Real-time Streaming**: Supports both immediate and streaming responses
-- 🛠️ **Custom Tool Integration**: Demonstrates how to extend agent capabilities
+- 🎲 **随机目的地选择**：使用自定义工具选择度假地点
+- 🗺️ **智能行程规划**：创建详细的逐日行程
+- 🔄 **实时流式响应**：支持即时响应和流式响应
+- 🛠️ **自定义工具集成**：展示如何扩展代理能力
 
-## 🔧 Technical Architecture
+## 🔧 技术架构
 
-### Core Technologies
+### 核心技术
 
-- **Microsoft Agent Framework**: Latest .NET implementation for AI agent development
-- **GitHub Models Integration**: Uses GitHub's AI model inference service
-- **OpenAI API Compatibility**: Leverages OpenAI client libraries with custom endpoints
-- **Secure Configuration**: Environment-based API key management
+- **Microsoft Agent Framework**：用于 AI 代理开发的最新 .NET 实现
+- **GitHub Models 集成**：使用 GitHub 的 AI 模型推理服务
+- **OpenAI API 兼容性**：利用自定义端点的 OpenAI 客户端库
+- **安全配置**：基于环境的 API 密钥管理
 
-### Key Components
+### 关键组件
 
-1. **AIAgent**: The main agent orchestrator that handles conversation flow
-2. **Custom Tools**: `GetRandomDestination()` function available to the agent
-3. **Chat Client**: GitHub Models-backed conversation interface
-4. **Streaming Support**: Real-time response generation capabilities
+1. **AIAgent**：处理对话流程的主要代理编排器
+2. **自定义工具**：`GetRandomDestination()` 函数可供代理使用
+3. **聊天客户端**：基于 GitHub Models 的对话界面
+4. **流式支持**：实时响应生成能力
 
-### Integration Pattern
+### 集成模式
 
 ```mermaid
 graph LR
-    A[User Request] --> B[AI Agent]
+    A[用户请求] --> B[AI 代理]
     B --> C[GitHub Models API]
-    B --> D[GetRandomDestination Tool]
-    C --> E[Travel Itinerary]
+    B --> D[GetRandomDestination 工具]
+    C --> E[旅行行程]
     D --> E
 ```
 
-## 🚀 Getting Started
+## 🚀 快速开始
 
-### Prerequisites
+### 前置条件
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
-- [GitHub Models API access token](https://docs.github.com/github-models/github-models-at-scale/using-your-own-api-keys-in-github-models)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 或更高版本
+- [GitHub Models API 访问令牌](https://docs.github.com/github-models/github-models-at-scale/using-your-own-api-keys-in-github-models)
 
-### Required Environment Variables
+### 所需环境变量
 
 ```bash
 # zsh/bash
@@ -61,9 +61,9 @@ $env:GH_ENDPOINT = "https://models.github.ai/inference"
 $env:GH_MODEL_ID = "openai/gpt-5-mini"
 ```
 
-### Sample Code
+### 示例代码
 
-To run the code example,
+要运行代码示例，
 
 ```bash
 # zsh/bash
@@ -71,13 +71,13 @@ chmod +x ./01-dotnet-agent-framework.cs
 ./01-dotnet-agent-framework.cs
 ```
 
-Or using the dotnet CLI:
+或使用 dotnet CLI：
 
 ```bash
 dotnet run ./01-dotnet-agent-framework.cs
 ```
 
-See [`01-dotnet-agent-framework.cs`](./01-dotnet-agent-framework.cs) for the complete code.
+完整的代码请参阅 [`01-dotnet-agent-framework.cs`](./01-dotnet-agent-framework.cs)。
 
 ```csharp
 #!/usr/bin/dotnet run
@@ -93,89 +93,89 @@ using Microsoft.Extensions.AI;
 
 using OpenAI;
 
-// Tool Function: Random Destination Generator
-// This static method will be available to the agent as a callable tool
-// The [Description] attribute helps the AI understand when to use this function
-// This demonstrates how to create custom tools for AI agents
-[Description("Provides a random vacation destination.")]
+// 工具函数：随机目的地生成器
+// 这个静态方法将作为可调用工具供代理使用
+// [Description] 属性帮助 AI 理解何时使用此函数
+// 这展示了如何为 AI 代理创建自定义工具
+[Description("提供一个随机的度假目的地。")]
 static string GetRandomDestination()
 {
-    // List of popular vacation destinations around the world
-    // The agent will randomly select from these options
+    // 全球热门度假目的地列表
+    // 代理将从这些选项中随机选择
     var destinations = new List<string>
     {
-        "Paris, France",
-        "Tokyo, Japan",
-        "New York City, USA",
-        "Sydney, Australia",
-        "Rome, Italy",
-        "Barcelona, Spain",
-        "Cape Town, South Africa",
-        "Rio de Janeiro, Brazil",
-        "Bangkok, Thailand",
-        "Vancouver, Canada"
+        "法国巴黎",
+        "日本东京",
+        "美国纽约",
+        "澳大利亚悉尼",
+        "意大利罗马",
+        "西班牙巴塞罗那",
+        "南非开普敦",
+        "巴西里约热内卢",
+        "泰国曼谷",
+        "加拿大温哥华"
     };
 
-    // Generate random index and return selected destination
-    // Uses System.Random for simple random selection
+    // 生成随机索引并返回选中的目的地
+    // 使用 System.Random 进行简单随机选择
     var random = new Random();
     int index = random.Next(destinations.Count);
     return destinations[index];
 }
 
-// Extract configuration from environment variables
-// Retrieve the GitHub Models API endpoint, defaults to https://models.github.ai/inference if not specified
-// Retrieve the model ID, defaults to openai/gpt-5-mini if not specified
-// Retrieve the GitHub token for authentication, throws exception if not specified
+// 从环境变量提取配置
+// 获取 GitHub Models API 端点，未指定时默认为 https://models.github.ai/inference
+// 获取模型 ID，未指定时默认为 openai/gpt-5-mini
+// 获取 GitHub 令牌进行身份验证，未指定时抛出异常
 var github_endpoint = Environment.GetEnvironmentVariable("GH_ENDPOINT") ?? "https://models.github.ai/inference";
 var github_model_id = Environment.GetEnvironmentVariable("GH_MODEL_ID") ?? "openai/gpt-5-mini";
 var github_token = Environment.GetEnvironmentVariable("GH_TOKEN") ?? throw new InvalidOperationException("GH_TOKEN is not set.");
 
-// Configure OpenAI Client Options
-// Create configuration options to point to GitHub Models endpoint
-// This redirects OpenAI client calls to GitHub's model inference service
+// 配置 OpenAI 客户端选项
+// 创建配置选项以指向 GitHub Models 端点
+// 这将 OpenAI 客户端调用重定向到 GitHub 的模型推理服务
 var openAIOptions = new OpenAIClientOptions()
 {
     Endpoint = new Uri(github_endpoint)
 };
 
-// Initialize OpenAI Client with GitHub Models Configuration
-// Create OpenAI client using GitHub token for authentication
-// Configure it to use GitHub Models endpoint instead of OpenAI directly
+// 使用 GitHub Models 配置初始化 OpenAI 客户端
+// 使用 GitHub 令牌进行身份验证创建 OpenAI 客户端
+// 配置为使用 Git Models 端点而非直接使用 OpenAI
 var openAIClient = new OpenAIClient(new ApiKeyCredential(github_token), openAIOptions);
 
-// Create AI Agent with Travel Planning Capabilities
-// Initialize OpenAI client, get chat client for specified model, and create AI agent
-// Configure agent with travel planning instructions and random destination tool
-// The agent can now plan trips using the GetRandomDestination function
+// 创建具有旅行规划能力的 AI 代理
+// 初始化 OpenAI 客户端，获取指定模型的聊天客户端，并创建 AI 代理
+// 配置代理的旅行规划指令和随机目的地工具
+// 代理现在可以使用 GetRandomDestination 函数规划行程
 AIAgent agent = openAIClient
     .GetChatClient(github_model_id)
     .CreateAIAgent(
-        instructions: "You are a helpful AI Agent that can help plan vacations for customers at random destinations",
+        instructions: "你是一个有用的 AI 代理，可以帮助客户在随机目的地规划度假",
         tools: [AIFunctionFactory.Create(GetRandomDestination)]
     );
 
-// Execute Agent: Plan a Day Trip
-// Run the agent with streaming enabled for real-time response display
-// Shows the agent's thinking and response as it generates the content
-// Provides better user experience with immediate feedback
-await foreach (var update in agent.RunStreamingAsync("Plan me a day trip"))
+// 执行代理：规划一日游
+// 使用流式启用运行代理以实时显示响应
+// 展示代理在生成内容时的思考和响应
+// 通过即时反馈提供更好的用户体验
+await foreach (var update in agent.RunStreamingAsync("帮我规划一日游"))
 {
     await Task.Delay(10);
     Console.Write(update);
 }
 ```
 
-## 🎓 Key Takeaways
+## 🎓 关键要点
 
-1. **Agent Architecture**: The Microsoft Agent Framework provides a clean, type-safe approach to building AI agents in .NET
-2. **Tool Integration**: Functions decorated with `[Description]` attributes become available tools for the agent
-3. **Configuration Management**: Environment variables and secure credential handling follow .NET best practices
-4. **OpenAI Compatibility**: GitHub Models integration works seamlessly through OpenAI-compatible APIs
+1. **代理架构**：Microsoft Agent Framework 为在 .NET 中构建 AI 代理提供了清晰、类型安全的方法
+2. **工具集成**：带有 `[Description]` 属性装饰的函数成为代理的可用水用工具
+3. **配置管理**：环境变量和安全凭证处理遵循 .NET 最佳实践
+4. **OpenAI 兼容性**：GitHub Models 集成通过 OpenAI 兼容 API 无缝工作
 
-## 🔗 Additional Resources
+## 🔗 额外资源
 
-- [Microsoft Agent Framework Documentation](https://learn.microsoft.com/agent-framework)
-- [GitHub Models Marketplace](https://github.com/marketplace?type=models)
+- [Microsoft Agent Framework 文档](https://learn.microsoft.com/agent-framework)
+- [GitHub Models 市场](https://github.com/marketplace?type=models)
 - [Microsoft.Extensions.AI](https://learn.microsoft.com/dotnet/ai/microsoft-extensions-ai)
-- [.NET Single File Apps](https://devblogs.microsoft.com/dotnet/announcing-dotnet-run-app)
+- [.NET 单文件应用](https://devblogs.microsoft.com/dotnet/announcing-dotnet-run-app)
