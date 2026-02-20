@@ -1,88 +1,88 @@
-# 🛠️ Advanced Tool Use with GitHub Models (.NET)
+# 🛠️ 使用 GitHub Models 实现高级工具调用 (.NET)
 
-## 📋 Learning Objectives
+## 📋 学习目标
 
-This notebook demonstrates enterprise-grade tool integration patterns using the Microsoft Agent Framework in .NET with GitHub Models. You'll learn to build sophisticated agents with multiple specialized tools, leveraging C#'s strong typing and .NET's enterprise features.
+本教程演示了如何使用 Microsoft Agent Framework for .NET 与 GitHub Models 构建企业级工具集成模式。你将学习如何使用多个专业工具构建复杂的代理，充分利用 C# 的强类型和 .NET 的企业级特性。
 
-### Advanced Tool Capabilities You'll Master
+### 你将掌握的高级工具能力
 
-- 🔧 **Multi-Tool Architecture**: Building agents with multiple specialized capabilities
-- 🎯 **Type-Safe Tool Execution**: Leveraging C#'s compile-time validation
-- 📊 **Enterprise Tool Patterns**: Production-ready tool design and error handling
-- 🔗 **Tool Composition**: Combining tools for complex business workflows
+- 🔧 **多工具架构**：构建具有多种专业能力的代理
+- 🎯 **类型安全的工具执行**：利用 C# 的编译时验证
+- 📊 **企业工具模式**：生产级工具设计和错误处理
+- 🔗 **工具组合**：组合工具以完成复杂的业务工作流
 
-## 🎯 .NET Tool Architecture Benefits
+## 🎯 .NET 工具架构优势
 
-### Enterprise Tool Features
+### 企业级工具特性
 
-- **Compile-Time Validation**: Strong typing ensures tool parameter correctness
-- **Dependency Injection**: IoC container integration for tool management
-- **Async/Await Patterns**: Non-blocking tool execution with proper resource management
-- **Structured Logging**: Built-in logging integration for tool execution monitoring
+- **编译时验证**：强类型确保工具参数正确
+- **依赖注入**：IoC 容器集成用于工具管理
+- **异步模式**：正确的资源管理的非阻塞工具执行
+- **结构化日志**：内置日志集成用于工具执行监控
 
-### Production-Ready Patterns
+### 生产就绪模式
 
-- **Exception Handling**: Comprehensive error management with typed exceptions
-- **Resource Management**: Proper disposal patterns and memory management
-- **Performance Monitoring**: Built-in metrics and performance counters
-- **Configuration Management**: Type-safe configuration with validation
+- **异常处理**：使用类型化异常的综合错误管理
+- **资源管理**：正确的 disposal 模式和内存管理
+- **性能监控**：内置指标和性能计数器
+- **配置管理**：带验证的类型安全配置
 
-## 🔧 Technical Architecture
+## 🔧 技术架构
 
-### Core .NET Tool Components
+### 核心 .NET 工具组件
 
-- **Microsoft.Extensions.AI**: Unified tool abstraction layer
-- **Microsoft.Agents.AI**: Enterprise-grade tool orchestration
-- **GitHub Models Integration**: High-performance API client with connection pooling
+- **Microsoft.Extensions.AI**：统一的工具抽象层
+- **Microsoft.Agents.AI**：企业级工具编排
+- **GitHub Models 集成**：带连接池的高性能 API 客户端
 
-### Tool Execution Pipeline
+### 工具执行流程
 
 ```mermaid
 graph LR
-    A[User Request] --> B[Agent Analysis]
-    B --> C[Tool Selection]
-    C --> D[Type Validation]
-    B --> E[Parameter Binding]
-    E --> F[Tool Execution]
+    A[用户请求] --> B[代理分析]
+    B --> C[工具选择]
+    C --> D[类型验证]
+    B --> E[参数绑定]
+    E --> F[工具执行]
     C --> F
-    F --> G[Result Processing]
+    F --> G[结果处理]
     D --> G
-    G --> H[Response]
+    G --> H[响应]
 ```
 
-## 🛠️ Tool Categories & Patterns
+## 🛠️ 工具类别与模式
 
-### 1. **Data Processing Tools**
+### 1. **数据处理工具**
 
-- **Input Validation**: Strong typing with data annotations
-- **Transform Operations**: Type-safe data conversion and formatting
-- **Business Logic**: Domain-specific calculation and analysis tools
-- **Output Formatting**: Structured response generation
+- **输入验证**：使用数据注解的强类型
+- **转换操作**：类型安全的数据转换和格式化
+- **业务逻辑**：领域特定的计算和分析工具
+- **输出格式化**：结构化响应生成
 
-### 2. **Integration Tools** 
+### 2. **集成工具**
 
-- **API Connectors**: RESTful service integration with HttpClient
-- **Database Tools**: Entity Framework integration for data access
-- **File Operations**: Secure file system operations with validation
-- **External Services**: Third-party service integration patterns
+- **API 连接器**：使用 HttpClient 的 RESTful 服务集成
+- **数据库工具**：用于数据访问的 Entity Framework 集成
+- **文件操作**：带验证的安全文件系统操作
+- **外部服务**：第三方服务集成模式
 
-### 3. **Utility Tools**
+### 3. **实用工具**
 
-- **Text Processing**: String manipulation and formatting utilities
-- **Date/Time Operations**: Culture-aware date/time calculations
-- **Mathematical Tools**: Precision calculations and statistical operations
-- **Validation Tools**: Business rule validation and data verification
+- **文本处理**：字符串操作和格式化工具
+- **日期/时间操作**：文化感知的日期/时间计算
+- **数学工具**：精确计算和统计操作
+- **验证工具**：业务规则验证和数据验证
 
-Ready to build enterprise-grade agents with powerful, type-safe tool capabilities in .NET? Let's architect some professional-grade solutions! 🏢⚡
+准备好在 .NET 中构建具有强大、类型安全工具能力的企业级代理了吗？让我们来设计一些专业级的解决方案！🏢⚡
 
-## 🚀 Getting Started
+## 🚀 入门
 
-### Prerequisites
+### 前置条件
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
-- [GitHub Models API access token](https://docs.github.com/github-models/github-models-at-scale/using-your-own-api-keys-in-github-models)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 或更高版本
+- [GitHub Models API 访问令牌](https://docs.github.com/github-models/github-models-at-scale/using-your-own-api-keys-in-github-models)
 
-### Required Environment Variables
+### 所需环境变量
 
 ```bash
 # zsh/bash
@@ -98,9 +98,9 @@ $env:GH_ENDPOINT = "https://models.github.ai/inference"
 $env:GH_MODEL_ID = "openai/gpt-5-mini"
 ```
 
-### Sample Code
+### 示例代码
 
-To run the code example,
+运行代码示例：
 
 ```bash
 # zsh/bash
@@ -108,13 +108,13 @@ chmod +x ./04-dotnet-agent-framework.cs
 ./04-dotnet-agent-framework.cs
 ```
 
-Or using the dotnet CLI:
+或使用 dotnet CLI：
 
 ```bash
 dotnet run ./04-dotnet-agent-framework.cs
 ```
 
-See [`04-dotnet-agent-framework.cs`](./04-dotnet-agent-framework.cs) for the complete code.
+查看 [`04-dotnet-agent-framework.cs`](./04-dotnet-agent-framework.cs) 获取完整代码。
 
 ```csharp
 #!/usr/bin/dotnet run
@@ -130,84 +130,84 @@ using Microsoft.Extensions.AI;
 
 using OpenAI;
 
-// Tool Function: Random Destination Generator
-// This static method will be available to the agent as a callable tool
-// The [Description] attribute helps the AI understand when to use this function
-// This demonstrates how to create custom tools for AI agents
-[Description("Provides a random vacation destination.")]
+// 工具函数：随机目的地生成器
+// 这个静态方法将作为可调用工具提供给代理
+// [Description] 属性帮助 AI 理解何时使用此函数
+// 这展示了如何为 AI 代理创建自定义工具
+[Description("提供一个随机度假目的地。")]
 static string GetRandomDestination()
 {
-    // List of popular vacation destinations around the world
-    // The agent will randomly select from these options
+    // 全球热门度假目的地列表
+    // 代理将随机选择这些选项
     var destinations = new List<string>
     {
-        "Paris, France",
-        "Tokyo, Japan",
-        "New York City, USA",
-        "Sydney, Australia",
-        "Rome, Italy",
-        "Barcelona, Spain",
-        "Cape Town, South Africa",
-        "Rio de Janeiro, Brazil",
-        "Bangkok, Thailand",
-        "Vancouver, Canada"
+        "法国巴黎",
+        "日本东京",
+        "美国纽约",
+        "澳大利亚悉尼",
+        "意大利罗马",
+        "西班牙巴塞罗那",
+        "南非开普敦",
+        "巴西里约热内卢",
+        "泰国曼谷",
+        "加拿大温哥华"
     };
 
-    // Generate random index and return selected destination
-    // Uses System.Random for simple random selection
+    // 生成随机索引并返回选中的目的地
+    // 使用 System.Random 进行简单随机选择
     var random = new Random();
     int index = random.Next(destinations.Count);
     return destinations[index];
 }
 
-// Extract configuration from environment variables
-// Retrieve the GitHub Models API endpoint, defaults to https://models.github.ai/inference if not specified
-// Retrieve the model ID, defaults to openai/gpt-5-mini if not specified
-// Retrieve the GitHub token for authentication, throws exception if not specified
+// 从环境变量提取配置
+// 获取 GitHub Models API 端点，未指定时默认为 https://models.github.ai/inference
+// 获取模型 ID，未指定时默认为 openai/gpt-5-mini
+// 获取用于认证的 GitHub 令牌，未指定时抛出异常
 var github_endpoint = Environment.GetEnvironmentVariable("GH_ENDPOINT") ?? "https://models.github.ai/inference";
 var github_model_id = Environment.GetEnvironmentVariable("GH_MODEL_ID") ?? "openai/gpt-5-mini";
 var github_token = Environment.GetEnvironmentVariable("GH_TOKEN") ?? throw new InvalidOperationException("GH_TOKEN is not set.");
 
-// Configure OpenAI Client Options
-// Create configuration options to point to GitHub Models endpoint
-// This redirects OpenAI client calls to GitHub's model inference service
+// 配置 OpenAI 客户端选项
+// 创建配置选项以指向 GitHub Models 端点
+// 这会将 OpenAI 客户端调用重定向到 GitHub 的模型推理服务
 var openAIOptions = new OpenAIClientOptions()
 {
     Endpoint = new Uri(github_endpoint)
 };
 
-// Initialize OpenAI Client with GitHub Models Configuration
-// Create OpenAI client using GitHub token for authentication
-// Configure it to use GitHub Models endpoint instead of OpenAI directly
+// 使用 GitHub Models 配置初始化 OpenAI 客户端
+// 使用 GitHub 令牌进行认证创建 OpenAI 客户端
+// 配置为使用 GitHub Models 端点而非直接使用 OpenAI
 var openAIClient = new OpenAIClient(new ApiKeyCredential(github_token), openAIOptions);
 
-// Define Agent Identity and Comprehensive Instructions
-// Agent name for identification and logging purposes
+// 定义代理身份和详细指令
+// 用于识别和日志记录的代理名称
 var AGENT_NAME = "TravelAgent";
 
-// Detailed instructions that define the agent's personality, capabilities, and behavior
-// This system prompt shapes how the agent responds and interacts with users
+// 定义代理个性、能力和行为的详细指令
+// 此系统提示塑造了代理如何响应和与用户交互
 var AGENT_INSTRUCTIONS = """
-You are a helpful AI Agent that can help plan vacations for customers.
+你是一个可以帮助客户规划度假的有用 AI 代理。
 
-Important: When users specify a destination, always plan for that location. Only suggest random destinations when the user hasn't specified a preference.
+重要提示：当用户指定目的地时，始终为该地点进行规划。只有在用户未指定偏好时才建议随机目的地。
 
-When the conversation begins, introduce yourself with this message:
-"Hello! I'm your TravelAgent assistant. I can help plan vacations and suggest interesting destinations for you. Here are some things you can ask me:
-1. Plan a day trip to a specific location
-2. Suggest a random vacation destination
-3. Find destinations with specific features (beaches, mountains, historical sites, etc.)
-4. Plan an alternative trip if you don't like my first suggestion
+对话开始时，请使用以下消息进行自我介绍：
+"你好！我是你的 TravelAgent 助手。我可以帮助你规划度假并为你推荐有趣的目的地。你可以问我以下问题：
+1. 为特定地点规划一日游
+2. 推荐随机度假目的地
+3. 查找具有特定特征的目的地（海滩、山脉、历史遗迹等）
+4. 如果你不喜欢我的第一个建议，规划替代行程
 
-What kind of trip would you like me to help you plan today?"
+今天你想让我帮你规划什么样的旅行？"
 
-Always prioritize user preferences. If they mention a specific destination like "Bali" or "Paris," focus your planning on that location rather than suggesting alternatives.
+始终优先考虑用户偏好。如果他们提到特定目的地如"巴厘岛"或"巴黎"，请专注于为该地点进行规划，而不是建议替代方案。
 """;
 
-// Create AI Agent with Advanced Travel Planning Capabilities
-// Initialize complete agent pipeline: OpenAI client → Chat client → AI agent
-// Configure agent with name, detailed instructions, and available tools
-// This demonstrates the .NET agent creation pattern with full configuration
+// 创建具有高级旅行规划功能的 AI 代理
+// 初始化完整代理管道：OpenAI 客户端 → 聊天客户端 → AI 代理
+// 配置代理名称、详细指令和可用工具
+// 这展示了带有完整配置的 .NET 代理创建模式
 AIAgent agent = openAIClient
     .GetChatClient(github_model_id)
     .CreateAIAgent(
@@ -216,17 +216,17 @@ AIAgent agent = openAIClient
         tools: [AIFunctionFactory.Create(GetRandomDestination)]
     );
 
-// Create New Conversation Thread for Context Management
-// Initialize a new conversation thread to maintain context across multiple interactions
-// Threads enable the agent to remember previous exchanges and maintain conversational state
-// This is essential for multi-turn conversations and contextual understanding
+// 创建新对话线程以进行上下文管理
+// 初始化新对话线程以在多次交互中维护上下文
+// 线程使代理能够记住之前的交换并维护对话状态
+// 这对于多轮对话和上下文理解至关重要
 AgentThread thread = agent.GetNewThread();
 
-// Execute Agent: First Travel Planning Request
-// Run the agent with an initial request that will likely trigger the random destination tool
-// The agent will analyze the request, use the GetRandomDestination tool, and create an itinerary
-// Using the thread parameter maintains conversation context for subsequent interactions
-await foreach (var update in agent.RunStreamingAsync("Plan me a day trip", thread))
+// 执行代理：第一个旅行规划请求
+// 使用可能触发随机目的地工具的初始请求运行代理
+// 代理将分析请求，使用 GetRandomDestination 工具，并创建行程
+// 使用 thread 参数维护后续交互的对话上下文
+await foreach (var update in agent.RunStreamingAsync("帮我规划一日游", thread))
 {
     await Task.Delay(10);
     Console.Write(update);
@@ -234,11 +234,11 @@ await foreach (var update in agent.RunStreamingAsync("Plan me a day trip", threa
 
 Console.WriteLine();
 
-// Execute Agent: Follow-up Request with Context Awareness
-// Demonstrate contextual conversation by referencing the previous response
-// The agent remembers the previous destination suggestion and will provide an alternative
-// This showcases the power of conversation threads and contextual understanding in .NET agents
-await foreach (var update in agent.RunStreamingAsync("I don't like that destination. Plan me another vacation.", thread))
+// 执行代理：带有上下文感知的后续请求
+// 通过引用之前的响应展示上下文对话
+// 代理会记住之前的目的地建议并提供替代方案
+// 这展示了 .NET 代理中对话线程和上下文理解的力量
+await foreach (var update in agent.RunStreamingAsync("我不喜欢那个目的地。帮我规划另一个度假行程。", thread))
 {
     await Task.Delay(10);
     Console.Write(update);
